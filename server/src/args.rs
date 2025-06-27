@@ -93,6 +93,12 @@ pub struct Opts {
     #[clap(long, default_value = "60")]
     pub save_interval: u64,
 
+    /// Save only the latest image as 'latest.png', overwriting it each time
+    ///
+    /// This value is only relevant if --save-dir is specified
+    #[clap(long)]
+    pub save_latest_only: bool,
+
     /// The maximum bandwidth at which a single client is
     /// allowed to send data to the server, in bits per second. Default is unlimited.
     #[clap(long)]

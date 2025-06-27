@@ -57,6 +57,7 @@ fn main() {
             dir,
             pixmap,
             Duration::from_secs(arg_handler.save_interval),
+            arg_handler.save_latest_only,
         ));
     }
 
@@ -112,17 +113,21 @@ async fn listen(
 }
 
 /// Save the current canvas at the current interval
-async fn spawn_save_image(dir: PathBuf, pixmap: Arc<Pixmap>, interval: Duration) {
+async fn spawn_save_image(dir: PathBuf, pixmap: Arc<Pixmap>, interval: Duration, save_latest_only: bool) {
     std::fs::create_dir_all(&dir).unwrap();
 
     loop {
-        let now = SystemTime::now()
-            .duration_since(SystemTime::UNIX_EPOCH)
-            .unwrap()
-            .as_secs();
-
         let mut path = dir.clone();
-        path.push(format!("{}.png", now));
+
+        if save_latest_only {
+            path.push("latest.png");
+        } else {
+            let now = SystemTime::now()
+                .duration_since(SystemTime::UNIX_EPOCH)
+                .unwrap()
+                .as_secs();
+            path.push(format!("{}.png", now));
+        }
 
         let (width, height) = pixmap.dimensions();
 
