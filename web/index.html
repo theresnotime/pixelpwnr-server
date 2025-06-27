@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>awawawa</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>awawawawa</h1>
+    
+    <div class="canvas-container">
+        <img id="canvas-image" src="latest.png" alt="Live Canvas" />
+    </div>
+    
+    <div class="status" id="status">
+        Loading canvas...
+    </div>
+    
+    <div class="controls">
+        <button id="refresh-btn" onclick="forceRefresh()">Refresh Now</button>
+        <button id="toggle-auto" onclick="toggleAutoRefresh()">Pause auto-refreshing</button>
+        <label for="refresh-interval">Interval (seconds):</label>
+        <input type="number" id="refresh-interval" value="3" min="1" max="60" step="1" onchange="updateRefreshInterval()">
+    </div>
+
+    <script src="js/meow.js"></script>
+    <!---
+            @@@@@@@@@                                   @@@@@@@@      
+       @@@@@@@@@@@                               @@@@@@@@@@@@@    
+      @@@@#===@@@@@@                           @@@@@@@#==@@@@@    
+      @@@@=====#@@@@@@@@@@@@@@      @@@      @@@@@@@==    @@@@@   
+      @@@@=======#@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@#==      #@@@@   
+      @@@@#========@@@#: :=@@@@@@@@@@@@@@@@@@@@#===        @@@@   
+      @@@@#=========#@=          #@@@ :@@@@@@#====         @@@@   
+      @@@@#===========@@            @   #@@#=====          @@@@   
+      @@@@@======:      :#                ======           @@@@   
+       @@@@===                          :=====            =@@@@   
+       @@@@========                                       #@@@@   
+       @@@@=====                                          @@@@@   
+       @@@@#==:                                           @@@@    
+       @@@@@=                                            @@@@@    
+       @@@@@                                             @@@@     
+      @@@@@       @@@@@=            #@@@@@              @@@@@     
+     @@@@@       @@@@@@@=          #@@@@@@@             #@@@@     
+     @@@@        @@@@@@@@          @@@@@@@@              @@@@@    
+    @@@@@        @@@@@@@:          #@@@@@@@              #@@@@    
+    @@@@:         @@@@@:            #@@@@@                @@@@    
+    @@@@                  #@@=                            @@@@    
+    @@@@                 @@@@@#                           @@@@    
+    @@@@                                                  @@@@    
+    @@@@                                                  @@@@    
+    @@@@            @@    @@@#       @@@                  @@@@    
+    @@@@             @@  @@  @@#   @@@                    @@@@    
+    @@@@@             @@@@     @@@@#                      @@@@    
+     @@@@@             =                                 #@@@@    
+      @@@@#                                              @@@@@    
+       @@@@@                                            @@@@@     
+        @@@@@@                                        :@@@@@      
+          @@@@@@                                     @@@@@@       
+            @@@@@@@@@                           =@@@@@@@@         
+              @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@           
+                  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@               
+                                                                  
+    --->
+</body>
+</html>

@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.canvas-container {
+    border: 2px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+#canvas-image {
+    display: block;
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.status {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.status.error {
+    background-color: #e53e3e;
+}
+
+.controls {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #3182ce;
+}
+
+button:disabled {
+    background-color: #718096;
+    cursor: not-allowed;
+}
+
+input[type="number"] {
+    padding: 5px 10px;
+    border: 1px solid #4a5568;
+    border-radius: 3px;
+    background-color: #2d3748;
+    color: white;
+    width: 80px;
+}
+
+label {
+    font-size: 14px;
+}
